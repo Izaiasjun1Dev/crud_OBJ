@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+<br>
+{% block main %}
+    {% for room in object_list %}
+        <a href="{% url 'edit_turmas' room.id %}">
+            {{room}}
+        </a>
+        <a href="{% url 'delete_turmas' room.id %}">Delete</a>
+        <br>
+
+        <a href="{% url 'create_turma' %}" class="btn-btn-info">Criar Turma</a>
+    {% endfor %}
+{% endblock  %}

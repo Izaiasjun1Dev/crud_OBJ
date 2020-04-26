@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+<br>
+{% block main %}
+    {% for alunos in object_list %}
+        <a href="{% url 'alunos_edit' alunos.id %}">
+            {{alunos}}
+        </a>
+        <a href="{% url 'alunos_delete' alunos.id %}">Delete</a>
+        <br>
+
+        <a href="create_aluno" class="btn-btn-info">Criar alunos</a>
+    {% endfor %}
+{% endblock  %}
